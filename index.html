@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridget May</title>
+    <link rel="stylesheet" href="main.css">
+    </head>
+<body>
+    <header>
+        <h1>Bridget May</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Socials</a>
+                    <div class="dropdown-content">
+                        <a href="https://www.linkedin.com/in/beemay2021/" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/mayb05" target="_blank">GitHub</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <aside id="sidebar">
+            <section id="about">
+                <img src="myface.jpeg" alt="Bridget May">
+                <h2>About Me</h2>
+                <p>Hi! My name is Bridget May. I am a fourth-year student at the University of Dayton. I am studying Computer Science with a minor in Graphic Design.</p>
+                <p>I am a motivated and detail-oriented individual seeking Summer 2025 internship opportunities in software development, graphic design, or project management. With a strong foundation in JavaScript, Python, and secure programming, I enjoy building efficient, user-friendly solutions.</p>
+                <p>Additionally, my proficiency in Adobe Creative Cloud enables me to craft compelling visual designs that enhance user experiences. I am also currently preparing for the Professional Scrum Master certification, strengthening my ability to lead agile teams and drive successful projects.</p>
+               
+                <h3>Education</h3>
+                <ul>
+                    <li>Bachelor of Science in Computer Science, University of Dayton, Expected May 2025</li>
+                    <li>Minor in Graphic Design</li>
+                </ul>
+               
+                <h3>Skills</h3>
+                <ul class="skills-list">
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>MongoDB</li>
+                    <li>Git</li>
+                    <li>Photoshop</li>
+                    <li>Illustrator</li>
+                </ul>
+            </section>
+        </aside>
+
+
+        <main id="content">
+            <section id="projects">
+                <h2>My Projects</h2>
+                <div class="project-box">
+                    <h4><a href="https://mayb05.github.io/group09-website/" target="_blank">Okoppi Journals Community Page</a></h4>
+                    <ul>
+                        <li>January 2024 - Present</li>
+                       
+                        <li>Collaborated with the Engineering Dept. to create a community page for a journal business</li>
+                        <li>Managed a team of students to develop the website using Next.js, Vercel, Tailwind, React, and MongoDB</li>
+                    </ul>
+                </div>
+                <div class="project-box">
+                    <h4>Messenger Application</h4>
+                    <ul>
+                        <li>August 2024 - December 2024</li>
+                        <li>Collaborated with 3 other students to design a real-time chat application</li>
+                        <li>Worked with Google Cloudshell, Node.js, HTML, CSS, Socket.io in order to create the application</li>
+                        <li>Acted as team leader to assist with organization</li>
+                    </ul>
+                </div>
+                <div class="project-box">
+                    <h4>Portfolio Website</h4>
+                    <ul>
+                        <li>Designed and developed a responsive portfolio website using HTML, CSS, and JavaScript</li>
+                        <li>Implemented a mobile-first design approach to ensure optimal user experience on all devices</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="waph-experiments">
+    <h2>WAPH Code Experiments</h2>
+
+    <div class="joke-box">
+        <h3> Random Joke (refreshes every minute)</h3>
+        <p id="jokeDisplay">Loading joke...</p>
+    </div>
+
+    <div class="weather-box">
+        <h3>🌦 Current Weather</h3>
+        <p id="weatherDisplay">Fetching weather...</p>
+    </div>
+
+    <div class="welcome-box">
+        <h3> Visitor Greeting</h3>
+        <p id="greetingMessage">Checking your visit status...</p>
+    </div>
+</section>
+ <section id="contact" class="contact-box">
+       <h2>Contact Me</h2>
+       <form id="contact-form" action="https://formspree.io/f/mldgyqgv" method="POST">
+      <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                   
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                   
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                   
+                    <button type="submit">Send</button>
+                </form>
+
+
+                <!-- Button to reveal email -->
+                <div class="reveal-email">
+                    <button id="revealEmailBtn" type="button">Reveal My Email</button>
+                    <p id="emailDisplay" style="display: none;">mayb05@udayton.edu</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2025 Bridget May. All rights reserved.</p>
+        <div id="date-time"></div> <!-- Element to display the date and time -->
+    </footer>
+
+
+    <!-- Custom Alert Modal -->
+    <div id="custom-alert" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p id="alert-message"></p>
+        </div>
+    </div>
+
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">â†‘</button>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
