@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. JokeAPI
     async function fetchJoke() {
         try {
-            const res = await fetch("https://v2.jokeapi.dev/joke/Any?format=txt");
+            const res = await fetch("https://v2.jokeapi.dev/joke/Programming?format=txt");
             const joke = await res.text();
             const jokeDisplay = document.getElementById("jokeDisplay");
             if (jokeDisplay) jokeDisplay.textContent = joke;
