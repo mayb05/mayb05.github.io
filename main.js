@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. JokeAPI
     async function fetchJoke() {
         try {
-            const res = await fetch("https://v2.jokeapi.dev/joke/Programming?format=txt");
+            const res = await fetch("https://v2.jokeapi.dev/joke/Any?format=txt");
             const joke = await res.text();
             const jokeDisplay = document.getElementById("jokeDisplay");
             if (jokeDisplay) jokeDisplay.textContent = joke;
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Weatherbit API (replace YOUR_API_KEY)
     async function fetchWeather() {
         try {
-            const response = await fetch("https://api.weatherbit.io/v2.0/current?city=Dayton&country=US&key=3e06a630aae04d4d9d41ee93fa947a7c");
+            const response = await fetch("https://api.weatherbit.io/v2.0/current?city=Dayton&country=US&key=YOUR_API_KEY");
             const data = await response.json();
             const temp = data.data[0].temp;
             const desc = data.data[0].weather.description;
@@ -163,4 +163,32 @@ document.addEventListener('DOMContentLoaded', () => {
         setCookie("lastVisit", now, 365);
     }
     showGreeting();
+
+    // === Digital Clock ===
+    function updateDigitalClock() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString();
+        const digitalClock = document.getElementById("digitalClock");
+        if (digitalClock) digitalClock.textContent = timeString;
+    }
+    setInterval(updateDigitalClock, 1000);
+    updateDigitalClock();
+
+    // === Analog Clock using jQuery ===
+    function updateAnalogClock() {
+        const now = new Date();
+        const seconds = now.getSeconds();
+        const minutes = now.getMinutes();
+        const hours = now.getHours();
+
+        const secondDeg = seconds * 6;
+        const minuteDeg = minutes * 6 + seconds * 0.1;
+        const hourDeg = (hours % 12) * 30 + minutes * 0.5;
+
+        $("#second-hand").css("transform", `rotate(${secondDeg}deg)`);
+        $("#minute-hand").css("transform", `rotate(${minuteDeg}deg)`);
+        $("#hour-hand").css("transform", `rotate(${hourDeg}deg)`);
+    }
+    setInterval(updateAnalogClock, 1000);
+    updateAnalogClock();
 });
