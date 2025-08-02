@@ -463,4 +463,7 @@ a:hover {
     width: 50%;
     background-color: crimson;
 }
-
+img {
+    height: 150px;
+    width: 150px;
+}
