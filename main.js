@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Weatherbit API (replace YOUR_API_KEY)
     async function fetchWeather() {
         try {
-            const response = await fetch("https://api.weatherbit.io/v2.0/current?city=Dayton&country=US&key=YOUR_API_KEY");
+            const response = await fetch("https://api.weatherbit.io/v2.0/current?city=Dayton&country=US&key=3e06a630aae04d4d9d41ee93fa947a7c");
             const data = await response.json();
             const temp = data.data[0].temp;
             const desc = data.data[0].weather.description;
